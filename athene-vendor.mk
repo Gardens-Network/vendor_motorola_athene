@@ -762,3 +762,18 @@ PRODUCT_PACKAGES += \
     QtiTelephonyServicelibrary \
     QPerformance \
     UxPerformance
+    
+# Moto Camera
+PRODUCT_COPY_FILES += \
+    proprietary/priv-app/MotCamera/lib/arm/libjni_mot_mosaic.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/MotCamera/lib/arm/libjni_mot_mosaic.so \
+    proprietary/priv-app/MotCamera/lib/arm/libMobileOcrEngine.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/MotCamera/lib/arm/libMobileOcrEngine.so \
+    proprietary/etc/permissions/com.motorola.cameraone.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.motorola.cameraone.xml \
+    proprietary/etc/permissions/com.motorola.motosignature.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.motorola.motosignature.xml \
+    proprietary/etc/permissions/deviceowner-configuration-com.motorola.cameraone.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/deviceowner-configuration-com.motorola.cameraone.xml \
+    proprietary/etc/permissions/privapp-permissions-com.motorola.cameraone.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-com.motorola.cameraone.xml \
+    proprietary/etc/sysconfig/hiddenapi-whitelist-com.motorola.cameraone.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/hiddenapi-whitelist-com.motorola.cameraone.xml \
+    proprietary/framework/com.motorola.motosignature.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/com.motorola.motosignature.jar
+
+PRODUCT_PACKAGES += \
+    MotoSignatureApp \
+    MotCamera
